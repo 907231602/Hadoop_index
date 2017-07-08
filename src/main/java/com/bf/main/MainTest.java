@@ -44,7 +44,7 @@ public class MainTest implements Tool {
 		job.setReducerClass(WordReducer.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(LongWritable.class);
-		
+		//文件夹下放多个文件文本，作为输入，输出结果作为下次输入
 		FileOutputFormat.setOutputPath(job, new Path("hdfs://yanjijun1:9000/wwwout"));
 		FileInputFormat.setInputPaths(job, new Path("hdfs://yanjijun1:9000/www"));
 		//===================================================================
